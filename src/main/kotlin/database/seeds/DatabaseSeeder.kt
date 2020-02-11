@@ -1,6 +1,6 @@
-package __PACKAGE__.database.seeds
+package com.egorsmkv.short_urls_service.database.seeds
 
-import __PACKAGE__.database.factories.UserFactory
+import com.egorsmkv.short_urls_service.database.factories.UserFactory
 import dev.alpas.Application
 import dev.alpas.make
 import dev.alpas.ozone.Seeder

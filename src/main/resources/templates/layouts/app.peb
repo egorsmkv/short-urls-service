@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>A service where you can short links</title>
+
+    <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark mb-3">
+
+    <a class="navbar-brand" href="{{ route('index') }}">Shortly</a>
+
+    <button class="navbar-toggler" type="button">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('help') }}">Help</a>
+            </li>
+        </ul>
+    </div>
+
+</nav>
+
+<div class="container-fluid">
+
+    {% if hasFlash('success') %}
+    <div class="alert alert-success">
+        {{ flash('success') }}
+    </div>
+    {% endif %}
+
+    {% block content %}{% endblock %}
+</div>
+
+</body>
+
+<script src="{{ mix('js/app.js') }}"></script>
+
+</html>

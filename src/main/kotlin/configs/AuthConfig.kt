@@ -1,6 +1,6 @@
-package __PACKAGE__.configs
+package com.egorsmkv.short_urls_service.configs
 
-import __PACKAGE__.entities.Users
+import com.egorsmkv.short_urls_service.entities.Users
 import dev.alpas.Environment
 import dev.alpas.auth.SessionAuthChannel
 import dev.alpas.auth.AuthConfig as BaseConfig

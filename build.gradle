@@ -10,12 +10,12 @@ plugins {
 }
 
 startScripts {
-    applicationName = '__APP_NAME__'
+    applicationName = 'short_urls_service'
 }
 
-mainClassName = '__PACKAGE__.StartKt'
+mainClassName = 'com.egorsmkv.short_urls_service.StartKt'
 
-group '__PACKAGE__'
+group 'com.egorsmkv.short_urls_service'
 version '1.0.0'
 
 repositories {
@@ -25,6 +25,8 @@ repositories {
 }
 
 dependencies {
+    implementation 'commons-validator:commons-validator:1.6'
+
     implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8'
     implementation 'ch.qos.logback:logback-classic:1.3.0-alpha5'
     implementation 'mysql:mysql-connector-java:8.0.19'
@@ -48,7 +50,7 @@ compileTestKotlin {
 
 jar {
     manifest {
-        attributes 'Main-Class': '__PACKAGE__.StartKt'
+        attributes 'Main-Class': 'com.egorsmkv.short_urls_service.StartKt'
     }
 }
 
@@ -60,7 +62,7 @@ task enforceVersion() {
 
 shadowJar {
     destinationDirectory = file("./")
-    archiveBaseName.set('__APP_NAME__')
+    archiveBaseName.set('short_urls_service')
     archiveClassifier.set(null)
     version = null
 }
@@ -72,5 +74,5 @@ test {
 }
 
 installDist {
-    destinationDir = file("./build/install/__APP_NAME__")
+    destinationDir = file("./build/install/short_urls_service")
 }

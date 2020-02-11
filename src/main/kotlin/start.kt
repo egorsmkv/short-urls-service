@@ -1,4 +1,4 @@
-package __PACKAGE__
+package com.egorsmkv.short_urls_service
 
 import dev.alpas.Alpas
 

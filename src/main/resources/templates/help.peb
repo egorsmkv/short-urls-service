@@ -1,0 +1,25 @@
+{% extends "layouts/app.peb" %}
+
+{% block content %}
+
+<h1>Help</h1>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquam aliquid aperiam eum quaerat ratione
+    repudiandae, rerum sed tenetur voluptatum!</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, aliquid animi assumenda commodi fuga in
+    ipsum, minima odio provident quia quo quos reiciendis, sequi veniam voluptatem. Ab commodi corporis culpa
+    cumque, doloremque dolorum ducimus exercitationem explicabo facilis fuga fugiat fugit hic id impedit ipsa iste
+    libero maxime natus nemo neque nesciunt, numquam officiis quaerat quas recusandae repellendus sequi sint
+    suscipit tempore tenetur totam ut vel voluptatum. Aliquid atque delectus fugiat neque placeat voluptatum! Ab
+    animi aperiam, consectetur consequatur earum et fuga nam nihil officia optio quidem voluptates. Cumque deleniti,
+    harum laboriosam mollitia numquam quam repudiandae totam voluptates? Consequuntur culpa doloribus dolorum ex
+    excepturi, expedita, facere id in inventore itaque iure maxime modi molestiae mollitia necessitatibus obcaecati
+    officia perferendis ratione sit tempora ut vel veniam voluptates. Consequuntur deserunt dolorem illo, inventore
+    ipsa nulla officiis omnis quae quam qui quia, quis, suscipit voluptas. Aperiam assumenda cupiditate deserunt,
+    eius facere harum, omnis praesentium quas quos repellendus sed sequi ut vero! Debitis dicta ea illum ipsum nam
+    qui quisquam ratione reprehenderit unde vitae! Ducimus explicabo fuga in incidunt maxime sed voluptatem
+    voluptates. Accusantium, aspernatur corporis laudantium repellendus sequi temporibus. Ab accusantium ad animi
+    eius error esse eveniet nihil nostrum tenetur totam. Dolore, perferendis, quasi!</p>
+
+{% endblock %}

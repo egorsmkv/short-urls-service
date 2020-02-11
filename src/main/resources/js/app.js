@@ -1,11 +1,36 @@
-import Vue from 'vue'
-import axios from 'axios'
+require('bootstrap');
 
-window.axios = axios
-window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest'
+const jQuery = require('jquery');
 
-Vue.component('welcome', require('./components/Welcome').default)
+jQuery('#clickedNext').click((event) => {
+    event.preventDefault();
 
-new Vue({
-    el: '#app'
-})
+    const url = jQuery('#linkField').val();
+
+    const result = jQuery('#result');
+    const error = jQuery('#error');
+    const shortURL = jQuery('#shortURL');
+    const errorMessage = jQuery('#errorMessage');
+
+    // Hide blocks
+    result.attr('style', 'display: none');
+    error.attr('style', 'display: none');
+
+    // Send a request to our backend
+    jQuery.ajax({
+        url: '/api/v1/short',
+        method: 'POST',
+        data: {
+            url: url,
+        },
+        success: (response) => {
+            if (response['ok']) {
+                shortURL.val(response['url']);
+                result.show();
+            } else {
+                errorMessage.text(response['message']);
+                error.show();
+            }
+        }
+    })
+});

@@ -1,4 +1,4 @@
-package __PACKAGE__.configs
+package com.egorsmkv.short_urls_service.configs
 
 import dev.alpas.Environment
 import dev.alpas.ozone.DatabaseConfig
@@ -8,7 +8,7 @@ import dev.alpas.ozone.MySqlConnection
 class DatabaseConfig(env: Environment) : DatabaseConfig(env) {
     init {
         // Uncomment the following line to add database support in your app
-        // addConnections(env)
+        addConnections(env)
     }
 
     private fun addConnections(env: Environment) {

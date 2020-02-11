@@ -1,0 +1,62 @@
+{% extends "layouts/app.peb" %}
+
+{% block content %}
+
+<div class="container">
+    <div class="jumbotron">
+
+        <h1>Shortly</h1>
+
+        <p class="lead">
+            Here you can short your links in order conveniently share them!
+        </p>
+
+        <form>
+            <div class="form-group">
+                <label for="linkField">Your link</label>
+                <input type="text" class="form-control" id="linkField" placeholder="https://...">
+            </div>
+            <button type="submit" class="btn btn-primary" id="clickedNext">Next</button>
+        </form>
+
+        <div id="result" style="display: none" class="mt-3">
+            <label for="shortURL">
+                Use this link:
+            </label>
+
+            <input type="text" class="form-control" id="shortURL">
+        </div>
+
+        <div id="error" style="display: none" class="mt-3">
+           <div class="alert alert-danger">
+               <span id="errorMessage"></span>
+           </div>
+        </div>
+
+    </div>
+
+    <h4>Latest links</h4>
+
+    {% if total == 0 %}
+    <div class="alert alert-warning">
+        No links.
+    </div>
+    {% else %}
+
+    <ul>
+        {% for link in links %}
+        {% set url = env("APP_URL") + "/" + link.id | toShort %}
+
+        <li>
+            <a href="{{ url }}">{{ url }}</a>
+            ({{ link.createdAt }})
+        </li>
+        {% endfor %}
+    </ul>
+
+    <h5>Total links: {{ total }}</h5>
+
+    {% endif %}
+</div>
+
+{% endblock %}

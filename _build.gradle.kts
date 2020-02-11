@@ -8,13 +8,13 @@
 //    id("com.github.johnrengelman.shadow") version "5.2.0"
 //}
 //
-//group = "__PACKAGE__"
+//group = "com.egorsmkv.short_urls_service"
 //version = "1.0.0"
 //
 //application {
-//    mainClassName = "__PACKAGE__.StartKt"
-//    applicationName = "__APP_NAME__"
-//    executableDir = "./build/install/__APP_NAME__"
+//    mainClassName = "com.egorsmkv.short_urls_service.StartKt"
+//    applicationName = "short_urls_service"
+//    executableDir = "./build/install/short_urls_service"
 //}
 //
 //repositories {
@@ -47,11 +47,11 @@
 //
 //tasks.named<ShadowJar>("shadowJar") {
 //    destinationDirectory.file("./")
-//    archiveBaseName.set("__APP_NAME__")
+//    archiveBaseName.set("short_urls_service")
 //    //archiveClassifier.set(null)
 //    //archiveVersion.set(null)
 //
 //    manifest {
-//        attributes(mapOf("Main-Class" to "__PACKAGE__.StartKt"))
+//        attributes(mapOf("Main-Class" to "com.egorsmkv.short_urls_service.StartKt"))
 //    }
 //}

@@ -1,6 +1,6 @@
-import __PACKAGE__.ConsoleKernel
-import __PACKAGE__.addRoutes
-import __PACKAGE__.database.factories.UserFactory
+import com.egorsmkv.short_urls_service.ConsoleKernel
+import com.egorsmkv.short_urls_service.addRoutes
+import com.egorsmkv.short_urls_service.database.factories.UserFactory
 import dev.alpas.auth.Authenticatable
 import dev.alpas.make
 import dev.alpas.ozone.from

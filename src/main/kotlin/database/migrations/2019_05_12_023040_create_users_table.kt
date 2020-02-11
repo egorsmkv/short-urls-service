@@ -1,6 +1,6 @@
-package __PACKAGE__.database.migrations
+package com.egorsmkv.short_urls_service.database.migrations
 
-import __PACKAGE__.entities.Users
+import com.egorsmkv.short_urls_service.entities.Users
 import dev.alpas.auth.PasswordResetTokens
 import dev.alpas.ozone.migration.Migration
 

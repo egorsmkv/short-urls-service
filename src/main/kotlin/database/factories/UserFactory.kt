@@ -1,7 +1,7 @@
-package __PACKAGE__.database.factories
+package com.egorsmkv.short_urls_service.database.factories
 
-import __PACKAGE__.entities.User
-import __PACKAGE__.entities.Users
+import com.egorsmkv.short_urls_service.entities.User
+import com.egorsmkv.short_urls_service.entities.Users
 import dev.alpas.hashing.Hasher
 import dev.alpas.ozone.EntityFactory
 import dev.alpas.ozone.faker
