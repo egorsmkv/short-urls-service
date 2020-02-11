@@ -4,11 +4,11 @@ import dev.alpas.ozone.migration.Migration
 
 class RemoveCodeFieldFromLinksTable : Migration() {
     override fun up() {
-        val createQuery = """
+        val query = """
             ALTER TABLE links DROP COLUMN code;
         """.trimIndent()
 
-        execute(createQuery)
+        execute(query)
     }
 
     override fun down() {
