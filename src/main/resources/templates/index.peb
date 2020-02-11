@@ -43,18 +43,33 @@
     </div>
     {% else %}
 
-    <ul>
+    <table class="table table-bordered table-striped table-sm">
+        <thead>
+        <tr>
+            <th scope="col">Link</th>
+            <th scope="col">Created at</th>
+        </tr>
+        </thead>
+        <tbody>
+
         {% for link in links %}
         {% set url = env("APP_URL") + "/" + link.id | toShort %}
 
-        <li>
-            <a href="{{ url }}">{{ url }}</a>
-            ({{ link.createdAt }})
-        </li>
-        {% endfor %}
-    </ul>
+        <tr>
+            <td><a href="{{ url }}">{{ url }}</a></td>
+            <td>{{ link.formattedCreatedAt }}</td>
+        </tr>
 
-    <h5>Total links: {{ total }}</h5>
+        {% endfor %}
+        </tbody>
+
+        <tfoot>
+        <tr>
+            <th scope="col">Total links</th>
+            <th scope="col">{{ total }}</th>
+        </tr>
+        </tfoot>
+    </table>
 
     {% endif %}
 </div>

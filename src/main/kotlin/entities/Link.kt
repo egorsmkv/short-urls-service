@@ -2,11 +2,13 @@ package com.egorsmkv.short_urls_service.entities
 
 import dev.alpas.ozone.MigratingTable
 import dev.alpas.ozone.bigIncrements
+import khronos.toString
 import me.liuwj.ktorm.dsl.*
 import me.liuwj.ktorm.entity.Entity
 import me.liuwj.ktorm.schema.text
 import me.liuwj.ktorm.schema.timestamp
 import java.time.Instant
+import java.util.*
 
 interface Link : Entity<Link> {
     companion object : Entity.Factory<Link>()
@@ -16,6 +18,8 @@ interface Link : Entity<Link> {
     var code: String
     var createdAt: Instant?
     var updatedAt: Instant?
+
+    fun formattedCreatedAt(): String = Date.from(createdAt).toString("yyyy-MM-dd HH:mm")
 }
 
 object Links : MigratingTable<Link>("links") {
